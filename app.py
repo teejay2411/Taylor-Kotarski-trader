@@ -1,3 +1,10 @@
-# Placeholder for main trading loop
-# In this read-only cloud version, trading logic is disabled.
-print("Trading logic would go here.")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Trading app is running!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
